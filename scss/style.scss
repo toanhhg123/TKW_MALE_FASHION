@@ -13,6 +13,17 @@ $base-color: #f2f3ec;
     }
 }
 
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
 .btn-black {
     display: block;
     padding: 0.5rem 0.75rem;
@@ -44,6 +55,68 @@ header {
     left: 0;
     right: 0;
     z-index: 9;
+
+    & .hd__modal {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        transition: all 0.3s linear;
+        transform: translateX(-100%);
+        & .nav__mb {
+            animation: slideIn 0.3s linear;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 300px;
+            max-width: 100%;
+            background-color: #fff;
+
+            & .nav__mb__log {
+                padding: 1rem;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+            }
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+
+                & a {
+                    display: block;
+                    padding: 0.8rem 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #272727;
+                    transition: all 0.3s ease-in;
+
+                    &:hover {
+                        background-color: rgba($color: #000000, $alpha: 0.1);
+                    }
+                    & .nav__link-left {
+                        display: flex;
+                        gap: 1rem;
+                        align-items: flex-end;
+                    }
+                }
+            }
+        }
+    }
+
+    & .hd__menu__icon {
+        color: #000000;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        display: none;
+        cursor: pointer;
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
+    }
 
     & .hd__container {
         display: flex;
@@ -107,6 +180,20 @@ header {
 
             &-icon {
                 cursor: pointer;
+            }
+        }
+
+        & .hd__cart {
+            position: relative;
+            & > span {
+                position: absolute;
+                top: -6px;
+                right: -10px;
+                font-size: 0.6rem;
+                padding: 4px 6px;
+                background-color: $red-color;
+                color: #fff;
+                border-radius: 30% 50%;
             }
         }
     }
