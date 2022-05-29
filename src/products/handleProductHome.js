@@ -1,6 +1,10 @@
 export const handleProductHome = (products) => {
     if (products && products.length) {
-        const location = document?.location?.origin || '';
+        const pathnameSplit = document.location.pathname.split('/');
+        const location = pathnameSplit.find((e) => e === 'TKW_MALE_FASHION')
+            ? '/TKW_MALE_FASHION'
+            : '';
+
         const productCardsComponent = document.querySelector('.prs__cards');
         let ListProducts = '';
         Array.from(products).forEach((pr) => {
