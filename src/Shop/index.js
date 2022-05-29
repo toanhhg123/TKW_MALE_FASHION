@@ -5,9 +5,8 @@ import { renderProduct } from '../products/handleProductHome.js';
 const iconPluss = document.querySelectorAll('.plus-icon');
 const iconDashs = document.querySelectorAll('.dash-icon');
 
-renderProduct(products).then((success) => {
-    if (success) location.href = baseURL + URL_PRODUCT_ITEM;
-});
+renderProduct(products, baseURL + URL_PRODUCT_ITEM);
+
 iconPluss.forEach((icon, index) => {
     icon.addEventListener('click', () => {
         const choices =

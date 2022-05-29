@@ -44,7 +44,7 @@ export const handleProduct = (product) => {
         : Promise.reject('Not found products');
 };
 
-export const renderProduct = (products) =>
+export const renderProduct = (products, URL) =>
     handleProduct(products)
         .then((pros) => {
             handleProductHome(pros);
@@ -61,7 +61,7 @@ export const renderProduct = (products) =>
                             'productItem',
                             JSON.stringify(product)
                         );
-                        return success;
+                        location.href = URL;
                     };
                 });
             }
