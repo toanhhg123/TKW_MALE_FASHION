@@ -61,8 +61,7 @@ export const renderProduct = (products) =>
                             'productItem',
                             JSON.stringify(product)
                         );
-                        location.href =
-                            location.origin + '/layout/productItem.html';
+                        return success;
                     };
                 });
             }
