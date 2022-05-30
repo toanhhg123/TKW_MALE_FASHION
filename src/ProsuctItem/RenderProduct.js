@@ -31,3 +31,21 @@ export const renderProductItem = () => {
     carouselInner.innerHTML = carouselItems;
     document.querySelector('.proItem__smaiImgs').innerHTML = smailButton;
 };
+
+export const handleQuantityValueInput = () => {
+    const inputValue = document.querySelector('.prI__qty__input input');
+    const plus = document.querySelector('.prI__icon__plus');
+    const dash = document.querySelector('.prI__icon__dash');
+
+    plus.onclick = () => {
+        const { value } = inputValue;
+        if (value >= 9) return;
+        inputValue.value = Number(value) + 1;
+    };
+
+    dash.onclick = () => {
+        const { value } = inputValue;
+        if (value <= 1) return;
+        inputValue.value = Number(value) - 1;
+    };
+};

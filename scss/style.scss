@@ -825,3 +825,66 @@ footer {
         }
     }
 }
+
+.prI__qty__input {
+    width: max-content;
+    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px 0px;
+
+    & input {
+        width: 50px;
+        outline: none;
+        border: none;
+        padding: 0.4rem 0.8rem;
+        background-color: transparent;
+    }
+
+    & button {
+        padding: 0 0.8rem;
+        background-color: transparent;
+        border: 1px solid rgba($color: #000000, $alpha: 0.1);
+    }
+
+    & .prI__icon__plus {
+        border-radius: 0 0 20px 0;
+    }
+
+    & .prI__icon__dash {
+        border-radius: 20px 0 0 0;
+    }
+}
+
+.cart {
+    & .pr__if-tb {
+        display: flex;
+        gap: 0.5rem;
+
+        & img {
+            width: 120px;
+        }
+
+        & .pr__if-ct {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            color: #6c6d70;
+        }
+    }
+
+    & table {
+        text-align: start;
+
+        & td {
+            vertical-align: top;
+        }
+
+        & .pr__total-tb {
+            display: flex;
+            gap: 1rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+    }
+}

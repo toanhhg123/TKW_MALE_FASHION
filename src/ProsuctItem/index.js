@@ -1,3 +1,7 @@
-import { renderProductItem } from './RenderProduct.js';
+import {
+    renderProductItem,
+    handleQuantityValueInput,
+} from './RenderProduct.js';
 
 renderProductItem();
+handleQuantityValueInput();

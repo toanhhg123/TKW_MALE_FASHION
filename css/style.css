@@ -704,4 +704,56 @@ footer .ft__box > form input {
   color: #fff;
 }
 
+.prI__qty__input {
+  width: max-content;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  border-radius: 20px 0px;
+}
+.prI__qty__input input {
+  width: 50px;
+  outline: none;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  background-color: transparent;
+}
+.prI__qty__input button {
+  padding: 0 0.8rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.prI__qty__input .prI__icon__plus {
+  border-radius: 0 0 20px 0;
+}
+.prI__qty__input .prI__icon__dash {
+  border-radius: 20px 0 0 0;
+}
+
+.cart .pr__if-tb {
+  display: flex;
+  gap: 0.5rem;
+}
+.cart .pr__if-tb img {
+  width: 120px;
+}
+.cart .pr__if-tb .pr__if-ct {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #6c6d70;
+}
+.cart table {
+  text-align: start;
+}
+.cart table td {
+  vertical-align: top;
+}
+.cart table .pr__total-tb {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 /*# sourceMappingURL=style.css.map */
