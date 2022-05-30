@@ -646,3 +646,182 @@ footer {
         }
     }
 }
+
+.proItem {
+    padding-top: 1rem;
+    & .proItem__grImgs {
+        display: flex;
+        justify-content: center;
+
+        & .proItem__mainImg {
+            width: 500px;
+            max-width: 100%;
+        }
+
+        & .proItem__smaiImgs {
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding: 0.5rem;
+        }
+    }
+
+    & .proItem__if {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media screen and(max-width: 1024px) {
+            margin-top: 2rem;
+        }
+
+        & > h2 {
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 32px;
+            color: #221f20;
+        }
+
+        & .proItem__id__rt {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            font-size: 16px;
+            line-height: 24px;
+            color: #6c6d70;
+            gap: 1rem;
+
+            & i {
+                color: #eeb256;
+            }
+        }
+
+        & .price {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #221f20;
+        }
+
+        & .prI__color {
+            & > h3 {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 30px;
+                color: #221f20;
+                margin-bottom: 0;
+            }
+
+            & .prI__color__select {
+                margin-top: 1rem;
+                display: flex;
+                gap: 0.5rem;
+
+                & button {
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    border: none;
+                    outline: none;
+                }
+            }
+        }
+
+        & .prI__size {
+            & .prI__size__btns {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                padding-bottom: 0.5rem;
+                & button {
+                    padding: 0.6rem 1rem;
+                    background-color: transparent;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+                    border-radius: 8px 16px;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    color: #666;
+                }
+            }
+
+            & .prI__checkSize {
+                margin-top: 12px;
+                font-size: 12px;
+                line-height: 16px;
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+
+        & .prI__qty {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #666;
+            & .prI__qty__input {
+                border: 1px solid rgba($color: #000000, $alpha: 0.1);
+                display: flex;
+                overflow: hidden;
+                border-radius: 20px 0px;
+
+                & input {
+                    width: 50px;
+                    outline: none;
+                    border: none;
+                    padding: 0.4rem 0.8rem;
+                }
+
+                & button {
+                    padding: 0 0.8rem;
+                    background-color: transparent;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.1);
+                }
+
+                & .prI__icon__plus {
+                    border-radius: 0 0 20px 0;
+                }
+
+                & .prI__icon__dash {
+                    border-radius: 20px 0 0 0;
+                }
+            }
+        }
+
+        & .prI__btns {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+
+            & button {
+                border: 1px solid rgba($color: #000000, $alpha: 0.3);
+                padding: 0.5rem 1rem;
+                background-color: #fff;
+                border-radius: 20px 0;
+                font-size: 1.2rem;
+                color: #221f20;
+                cursor: pointer;
+                transition: all 0.4s;
+
+                &.active {
+                    background-color: #272727;
+                    color: #fff;
+                }
+
+                &:hover {
+                    background-color: #272727;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

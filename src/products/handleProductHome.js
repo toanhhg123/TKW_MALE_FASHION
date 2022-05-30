@@ -7,12 +7,14 @@ export const handleProductHome = (products) => {
 
         const productCardsComponent = document.querySelector('.prs__cards');
         let ListProducts = '';
-        Array.from(products).forEach((pr) => {
+        Array.from(products).forEach((pr, i) => {
             ListProducts += `
             <div class="col-6 col-lg-3 col-sm-4">
             <div class="prs__card">
                 <smail style="display: none">${pr?.id}</smail>
-                    <div class="prs-bannel">New</div>
+                    <div class="prs-bannel ${i % 2 === 0 && 'black'}">${
+                i % 2 === 0 ? 'sale' : 'new'
+            }</div>
                     <div class="prs__card-img">
                         <img src="${`${location}/data/productData/imgs/${
                             pr?.img || ''

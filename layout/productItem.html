@@ -4,17 +4,345 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap-icon.css" />
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <title>MALE FASHION</title>
     </head>
     <body>
-        <script>
-            const product = JSON.parse(sessionStorage.getItem('productItem'));
+        <header>
+            <div class="hd__modal">
+                <div class="nav__mb">
+                    <div class="nav__mb__log">
+                        <img src="../images/male_mashion.png" alt="" />
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div class="nav__link-left">
+                                    <i class="bi bi-house"></i>
+                                    <span>Home</span>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="nav__link-left">
+                                    <i class="bi bi-shop"></i>
+                                    <span>Shop</span>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="nav__link-left">
+                                    <i class="bi bi-newspaper"></i>
+                                    <span>Blog</span>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="nav__link-left">
+                                    <i class="bi bi-chat-left-quote"></i>
+                                    <span>Contact</span>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hd__container container">
+                <div class="hd__menu__icon">
+                    <i class="bi bi-list"></i>
+                </div>
 
-            if (product) {
-                document.querySelector(
-                    'body'
-                ).innerHTML = `<h1>${product.name}</h1>`;
-            }
-        </script>
+                <div class="hd__logo">
+                    <img src="../images/male_mashion.png" alt="" />
+                </div>
+                <div class="hd__nav">
+                    <ul>
+                        <li><a class="active" href="">Home</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hd__auth">
+                    <div class="hd__auth-icon">
+                        <img
+                            src="../bootstrap/bootstrapIcons/search.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="hd__auth-icon">
+                        <img
+                            src="../bootstrap/bootstrapIcons/heart.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="hd__auth-icon hd__cart">
+                        <span>12</span>
+                        <img src="../bootstrap/bootstrapIcons/bag.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="proItem">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-7">
+                            <div class="proItem__grImgs">
+                                <div class="proItem__mainImg">
+                                    <div
+                                        id="carouselExampleControls"
+                                        class="carousel slide"
+                                        data-bs-ride="carousel"
+                                    >
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img
+                                                    src="../images/prs_1.png"
+                                                    class="d-block w-100"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img
+                                                    src="../images/prs_2.png"
+                                                    class="d-block w-100"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img
+                                                    src="../images/prs_3.png"
+                                                    class="d-block w-100"
+                                                    alt="..."
+                                                />
+                                            </div>
+
+                                            <div class="carousel-item">
+                                                <img
+                                                    src="../images/prs_4.png"
+                                                    class="d-block w-100"
+                                                    alt="..."
+                                                />
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="carousel-control-prev"
+                                            type="button"
+                                            data-bs-target="#carouselExampleControls"
+                                            data-bs-slide="prev"
+                                        >
+                                            <span
+                                                class="carousel-control-prev-icon"
+                                                aria-hidden="true"
+                                            ></span>
+                                            <span class="visually-hidden"
+                                                >Previous</span
+                                            >
+                                        </button>
+                                        <button
+                                            class="carousel-control-next"
+                                            type="button"
+                                            data-bs-target="#carouselExampleControls"
+                                            data-bs-slide="next"
+                                        >
+                                            <span
+                                                class="carousel-control-next-icon"
+                                                aria-hidden="true"
+                                            ></span>
+                                            <span class="visually-hidden"
+                                                >Next</span
+                                            >
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="proItem__smaiImgs">
+                                    <img
+                                        src="../images/prs_1.png"
+                                        alt=""
+                                        data-bs-target="#carouselExampleControls"
+                                        data-bs-slide-to="0"
+                                    />
+                                    <img
+                                        src="../images/prs_2.png"
+                                        alt=""
+                                        data-bs-target="#carouselExampleControls"
+                                        data-bs-slide-to="1"
+                                    />
+                                    <img
+                                        src="../images/prs_3.png"
+                                        alt=""
+                                        data-bs-target="#carouselExampleControls"
+                                        data-bs-slide-to="2"
+                                    />
+
+                                    <img
+                                        src="../images/prs_4.png"
+                                        alt=""
+                                        data-bs-target="#carouselExampleControls"
+                                        data-bs-slide-to="3"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-5">
+                            <div class="proItem__if">
+                                <h2>ÁO POLO CỔ ĐỨC</h2>
+                                <div class="proItem__id__rt">
+                                    <div class="prI__id">
+                                        <span>SKU: 57E3345</span>
+                                    </div>
+                                    <div class="prI__rt">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <span>(0 đánh giá)</span>
+                                    </div>
+                                </div>
+                                <h3 class="price">790.000đ</h3>
+                                <div class="prI__color">
+                                    <h3>Màu sắc: Xanh Cổ Vịt Đậm</h3>
+                                    <div class="prI__color__select">
+                                        <button class="bg-primary text-white">
+                                            <i class="bi bi-check"></i>
+                                        </button>
+                                        <button class="bg-black"></button>
+                                    </div>
+                                </div>
+                                <div class="prI__size">
+                                    <div class="prI__size__btns">
+                                        <button>S</button>
+                                        <button>M</button>
+                                        <button>L</button>
+                                        <button>XL</button>
+                                        <button>XXL</button>
+                                    </div>
+                                    <div class="prI__checkSize">
+                                        <i class="bi bi-eraser"></i>
+                                        <p>Kiểm tra size của bạn</p>
+                                    </div>
+                                </div>
+
+                                <div class="prI__qty">
+                                    <p>Số lượng</p>
+                                    <div class="prI__qty__input">
+                                        <button class="prI__icon__plus">
+                                            <i class="bi bi-plus-lg"></i>
+                                        </button>
+                                        <input type="text" value="1" />
+                                        <button class="prI__icon__dash">
+                                            <i class="bi bi-dash-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="prI__btns">
+                                    <button class="active">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                    <button>Mua Hàng</button>
+                                    <button>
+                                        <i class="bi bi-suit-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="ft__box">
+                            <div class="ft-logo">
+                                <img src="../images/lg_remove_bn.png" alt="" />
+                            </div>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Eligendi, ipsa. Voluptate
+                                possimus recusandae modi officia doloribus
+                                mollitia perspiciatis, facere eveniet aspernatur
+                                sapiente! Eius, tempora explicabo vero officia
+                                eaque quo quasi.
+                            </p>
+                            <div class="ft__cards d-flex gap-2">
+                                <div class="ft__card-img">
+                                    <img src="../images/ft_1.png" alt="" />
+                                </div>
+                                <div class="ft__card-img">
+                                    <img src="../images/ft_2.png" alt="" />
+                                </div>
+                                <div class="ft__card-img">
+                                    <img src="../images/ft_3.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3">
+                        <div class="ft__box">
+                            <h3>SHOPPING</h3>
+                            <a href="">Clothing Store</a>
+                            <a href="">Accessories</a>
+                            <a href="">Sale</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3">
+                        <div class="ft__box">
+                            <h3>SHOPPING</h3>
+                            <a href="">Contact us</a>
+                            <a href="">Payment method</a>
+                            <a href="">Delivery</a>
+                            <a href="">Return & Exchange</a>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-3">
+                        <div class="ft__box">
+                            <h3>NEWLETTER</h3>
+                            <p>
+                                Be the first to know about new arrivals, look
+                                books, sales & promos!
+                            </p>
+                            <form action="">
+                                <input
+                                    type="text"
+                                    placeholder="Your Email"
+                                    name=""
+                                    id=""
+                                />
+                                <i class="bi bi-chat-dots"></i>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../js/index.js" type="module"></script>
+        <script src="../src/ProsuctItem/index.js" type="module"></script>
     </body>
 </html>
