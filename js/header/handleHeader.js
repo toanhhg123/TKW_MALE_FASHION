@@ -1,5 +1,5 @@
 import { baseURL } from '../../URL/config.js';
-import { URL_HOME, URL_SHOP } from '../../URL/Routes.js';
+import { URL_HOME, URL_SHOP, URL_CART } from '../../URL/Routes.js';
 
 export const renderLinkHeder = () => {
     const hdNav = document.querySelector('.hd__nav ul');
@@ -47,7 +47,11 @@ export const renderLinkHeder = () => {
     const linksPc = `
     <li>
         <a 
-            class="${URL_HOME === pathname ? 'active' : ''}" href="${URL_HOME}"
+            class="${
+                URL_HOME === pathname || pathname === `${URL_HOME}/`
+                    ? 'active'
+                    : ''
+            }" href="${URL_HOME}"
         >
             Home
         </a>
@@ -92,4 +96,20 @@ export const handShowNavMobile = () => {
     headerModalMobile.addEventListener('click', () => {
         headerModalMobile.style.transform = 'translateX(-100%)';
     });
+};
+
+export const redirectCart = () => {
+    const cart = document.querySelector('.hd__cart');
+    cart.onclick = () => {
+        document.location.href = URL_CART;
+    };
+};
+
+export const showNumberCart = () => {
+    const carthd = document.querySelector('.hd__cart');
+    const qty = carthd.querySelector('span');
+
+    let cartNumber = JSON.parse(sessionStorage.getItem('cart'))?.length || 0;
+
+    qty.textContent = cartNumber;
 };

@@ -106,8 +106,8 @@
                         <div class="col-12 col-lg-7">
                             <div class="cart__if pt-5">
                                 <h2 class="fs-4 fw-semibold">
-                                    Giỏ hàng của bạn
-                                    <span class="text-danger">2 Sản Phẩm</span>
+                                    Giỏ hàng của bạn -
+                                    <span class="text-danger"> Sản Phẩm</span>
                                 </h2>
 
                                 <table
@@ -121,7 +121,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <!-- <tr>
                                             <td>
                                                 <div class="pr__if-tb">
                                                     <div class="pr__if-img">
@@ -168,12 +168,40 @@
                                                     <i class="bi bi-trash"></i>
                                                 </div>
                                             </td>
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-5"></div>
+                        <div class="col-12 col-lg-5">
+                            <div class="cart__result">
+                                <div class="cart__result__ct">
+                                    <h3>Tổng tiền sản phẩm</h3>
+                                    <div class="">
+                                        <span>Tổng sản phẩm: </span>
+                                        <span class="sum__qty">0</span>
+                                    </div>
+                                    <div class="">
+                                        <span>Tổng tiền hàng: </span>
+                                        <span class="sum__money">0</span>
+                                    </div>
+                                    <div class="">
+                                        <span>Thành tiền: </span>
+                                        <span class="total__money">0</span>
+                                    </div>
+                                    <div class="if__ship">
+                                        <i class="bi bi-check2-circle"></i>
+                                        <p>
+                                            Đơn hàng của bạn được Miễn phí ship
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart__btn__buy">
+                                <button>BUY</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -251,5 +279,6 @@
         <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="../bootstrap/js/bootstrap.min.js"></script>
         <script src="../js/index.js" type="module"></script>
+        <script src="../src/Cart/index.js" type="module"></script>
     </body>
 </html>

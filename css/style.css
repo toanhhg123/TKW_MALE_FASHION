@@ -394,6 +394,9 @@ main {
   position: relative;
   margin-bottom: 8rem;
 }
+.lastnew .ln__card-img img {
+  width: 100%;
+}
 .lastnew .ln__card .ln__ct {
   position: absolute;
   left: 50%;
@@ -754,6 +757,54 @@ footer .ft__box > form input {
   gap: 1rem;
   font-size: 1.2rem;
   font-weight: 500;
+}
+.cart .cart__result {
+  padding-top: 5rem;
+}
+.cart .cart__result__ct {
+  padding: 1rem;
+  background: rgba(247, 248, 249, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 1rem;
+}
+.cart .cart__result__ct h3 {
+  font-size: 1.5rem;
+}
+.cart .cart__result__ct div {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart .cart__result__ct div span:nth-child(2) {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.cart .cart__result__ct div i,
+.cart .cart__result__ct div p {
+  color: #28a745;
+  font-size: 0.8rem;
+}
+.cart .cart__result__ct .if__ship {
+  justify-content: start;
+  gap: 0.5rem;
+}
+.cart .cart__btn__buy {
+  padding-top: 2rem;
+}
+.cart .cart__btn__buy button {
+  width: 100%;
+  padding: 0.6rem 0rem;
+  background-color: #000000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-radius: 20px 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=style.css.map */

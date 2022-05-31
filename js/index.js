@@ -1,6 +1,13 @@
-import { handShowNavMobile, renderLinkHeder } from './header/handleHeader.js';
+import {
+    handShowNavMobile,
+    renderLinkHeder,
+    redirectCart,
+    showNumberCart,
+} from './header/handleHeader.js';
 
 window.onload = (e) => {
-    handShowNavMobile();
+    showNumberCart(0);
     renderLinkHeder();
+    handShowNavMobile();
+    redirectCart();
 };

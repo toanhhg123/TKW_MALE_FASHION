@@ -1,7 +1,10 @@
 import {
     renderProductItem,
     handleQuantityValueInput,
+    orderProduct,
 } from './RenderProduct.js';
 
-renderProductItem();
 handleQuantityValueInput();
+renderProductItem().then((res) => {
+    if (res) orderProduct();
+});
