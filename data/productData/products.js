@@ -11,7 +11,7 @@ export const products = [
         Màu sắc: Bạc Hà - Xanh Tím Than`,
         img: 'prs_20.png',
         imgs: ['prs_20_1.png', 'prs_20_2.png', 'prs_20_3.png', 'prs_20_4.png'],
-        rate: 5,
+        rate: 4,
     },
 
     {
@@ -41,22 +41,7 @@ export const products = [
         Màu sắc: Kẻ Xanh Lơ - Kẻ Xanh Dương - Kẻ Xanh Tím Than`,
         img: 'prs_22.png',
         imgs: ['prs_22_1.png', 'prs_22_2.png', 'prs_22_3.png', 'prs_22_4.png'],
-        rate: 5,
-    },
-
-    {
-        id: 'T22',
-        name: 'ÁO SƠ MI VIỀN CỔ',
-        sale: 952,
-        price: 1190,
-        decs: `Áo sơ mi cổ đức, tay dài, dáng slim fit ôm nhẹ. Phần cổ có đường viền. 
-
-        Mẫu áo thích hợp mặc đi làm cho các chàng trai công sở. Thiết kế dài tay, lịch sự. Form slim fit gọn gàng. Màu sắc dễ mặc, trẻ trung. Chàng có thể sơ vin hay thả dáng đều đẹp. Phù hợp phối cùng quần tối màu.
-        
-        Màu sắc: Kẻ Xanh Lơ - Kẻ Xanh Dương - Kẻ Xanh Tím Than`,
-        img: 'prs_22.png',
-        imgs: ['prs_22_1.png', 'prs_22_2.png', 'prs_22_3.png', 'prs_22_4.png'],
-        rate: 5,
+        rate: 2,
     },
 
     {
@@ -71,7 +56,7 @@ export const products = [
         Màu sắc: Trắng - Xanh lơ`,
         img: 'prs_23.png',
         imgs: ['prs_23_1.png', 'prs_23_2.png', 'prs_23_3.png', 'prs_23_4.png'],
-        rate: 5,
+        rate: 3,
     },
 
     {
@@ -108,7 +93,7 @@ export const products = [
             'prs_25_5.png',
             'prs_25_6.png',
         ],
-        rate: 5,
+        rate: 4,
     },
 
     {
@@ -130,7 +115,7 @@ export const products = [
             'prs_26_5.png',
             'prs_26_6.png',
         ],
-        rate: 5,
+        rate: 3,
     },
 
     {
@@ -190,7 +175,7 @@ export const products = [
             'prs_29_5.png',
             'prs_29_6',
         ],
-        rate: 5,
+        rate: 3,
     },
 
     {

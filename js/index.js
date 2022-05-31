@@ -1,3 +1,4 @@
+import '../lib/jquery.js';
 import {
     handShowNavMobile,
     renderLinkHeder,
@@ -11,3 +12,8 @@ window.onload = (e) => {
     handShowNavMobile();
     redirectCart();
 };
+
+$(window).on('load', () => {
+    $('.show__loader').fadeOut(1000);
+    $('body').fadeIn(1000);
+});
