@@ -1,5 +1,24 @@
 import { baseURL } from '../../URL/config.js';
 import { URL_HOME, URL_SHOP, URL_CART } from '../../URL/Routes.js';
+import { products } from '../../data/productData/products.js';
+import { saveProductToSession } from '../../src/ProsuctItem/RenderProduct.js';
+
+export const ShowSearchHeader = () => {
+    const headerSearch = document.createElement('div');
+    headerSearch.classList = 'hd__search__show';
+    headerSearch.innerHTML = `
+        <div class="hd__search__input">
+            <input type="text" placeholder="Search.." />
+            <i class="bi bi-search"></i>
+        </div>
+        <div class="hd__prs__search">
+            
+        </div>
+    
+    `;
+
+    return headerSearch;
+};
 
 export const renderLinkHeder = () => {
     const hdNav = document.querySelector('.hd__nav ul');
@@ -112,4 +131,105 @@ export const showNumberCart = () => {
     let cartNumber = JSON.parse(sessionStorage.getItem('cart'))?.length || 0;
 
     qty.textContent = cartNumber;
+};
+
+export const renderIcons = () => {
+    return (document.querySelector('header .hd__auth').innerHTML = `
+    <div class="hd__auth-icon icon-search__header">
+    <img
+        src="${baseURL}/bootstrap/bootstrapIcons/search.svg"
+        alt=""
+    />
+</div>
+<div class="hd__auth-icon icon-close__header">
+    <img src="${baseURL}/bootstrap/bootstrapIcons/x-lg.svg" alt="" />
+</div>
+<div class="hd__auth-icon">
+    <img
+        src="${baseURL}/bootstrap/bootstrapIcons/heart.svg"
+        alt=""
+    />
+</div>
+<div class="hd__auth-icon hd__cart">
+    <span>12</span>
+    <img src="${baseURL}/bootstrap/bootstrapIcons/bag.svg" alt="" />
+</div>
+    
+    `);
+};
+
+const searchItem = (id, img, price, name, desc) => {
+    return `
+    <div class="hd__pr-item">
+    <small id="${id}" style='display: none'></small>
+        <div class="hd__pr-img">
+            <img src="${baseURL}/data/productData/imgs/${img}" alt="" />
+        </div>
+        <div class="hd__pr-ct">
+            <h3>${name}</h3>
+            <span>${price}</span>
+            <p>
+            ${desc}
+            </p>
+        </div>
+    </div>
+    
+    `;
+};
+
+export const renderHeaderSearch = () => {
+    document.querySelector('header').appendChild(ShowSearchHeader());
+    const showHeaderSearch = document.querySelector('.hd__search__show');
+    const iconSearch = document.querySelector('.icon-search__header');
+    const iconClose = document.querySelector('.icon-close__header');
+    iconSearch.onclick = () => {
+        iconSearch.style.display = 'none';
+        iconClose.style.display = 'block';
+        showHeaderSearch.style.display = 'block';
+    };
+
+    iconClose.onclick = () => {
+        iconSearch.style.display = 'block';
+        iconClose.style.display = 'none';
+        showHeaderSearch.style.display = 'none';
+    };
+};
+
+export const SearchProduct = () => {
+    const input = document.querySelector('.hd__search__input input');
+    const headerSearchShow = document.querySelector('.hd__prs__search');
+    console.log(input);
+    input.addEventListener('input', (e) => {
+        let productItems = ``;
+        const value = e.target.value;
+        const arrProduct = products
+            .filter(
+                (pro) =>
+                    value.trim() &&
+                    pro.name.toLowerCase().search(value.toLowerCase()) !== -1
+            )
+            .slice(0, 5);
+        arrProduct.forEach((pro) => {
+            const { id, img, price, name, decs } = pro;
+
+            productItems += searchItem(id, img, price, name, decs);
+        });
+
+        headerSearchShow.innerHTML = productItems;
+
+        redirectProductItemWithSearch();
+    });
+};
+
+const redirectProductItemWithSearch = () => {
+    const prItemSearchs = document.querySelectorAll('.hd__pr-item');
+    if (prItemSearchs && prItemSearchs.length) {
+        prItemSearchs.forEach((item) => {
+            item.onclick = () => {
+                const id = item.querySelector('small').id;
+                saveProductToSession(id);
+                document.location.href = baseURL + '/layout/productItem.html';
+            };
+        });
+    }
 };

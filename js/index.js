@@ -4,13 +4,19 @@ import {
     renderLinkHeder,
     redirectCart,
     showNumberCart,
+    renderHeaderSearch,
+    renderIcons,
+    SearchProduct,
 } from './header/handleHeader.js';
 
 window.onload = (e) => {
-    showNumberCart(0);
     renderLinkHeder();
+    renderIcons();
     handShowNavMobile();
     redirectCart();
+    renderHeaderSearch();
+    SearchProduct();
+    showNumberCart(0);
 };
 
 $(window).on('load', () => {

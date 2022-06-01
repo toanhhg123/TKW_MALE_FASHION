@@ -1,5 +1,6 @@
 import { baseURL } from '../../URL/config.js';
 import { URL_CART } from '../../URL/Routes.js';
+import { products } from '../../data/productData/products.js';
 export const renderStart = (num, cmt = false) => {
     let stars = ``;
     for (let i = 0; i < num; i++) stars += `<i class="bi bi-star-fill"></i>`;
@@ -104,4 +105,9 @@ export const orderProduct = () => {
         addProductToCart();
         document.location.href = URL_CART;
     };
+};
+
+export const saveProductToSession = (id) => {
+    const product = products.find((pro) => pro.id === id);
+    sessionStorage.setItem('productItem', JSON.stringify(product));
 };
