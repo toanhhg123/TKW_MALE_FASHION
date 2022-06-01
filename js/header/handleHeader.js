@@ -1,5 +1,11 @@
 import { baseURL } from '../../URL/config.js';
-import { URL_HOME, URL_SHOP, URL_CART } from '../../URL/Routes.js';
+import {
+    URL_HOME,
+    URL_SHOP,
+    URL_CART,
+    URL_CONTACT,
+    URL_FORMS,
+} from '../../URL/Routes.js';
 import { products } from '../../data/productData/products.js';
 import { saveProductToSession } from '../../src/ProsuctItem/RenderProduct.js';
 
@@ -44,16 +50,16 @@ export const renderLinkHeder = () => {
         </a>
     </li>
     <li>
-        <a href="#">
+        <a href="${URL_FORMS}">
             <div class="nav__link-left">
                 <i class="bi bi-newspaper"></i>
-                <span>Blog</span>
+                <span>Form</span>
             </div>
             <i class="bi bi-chevron-right"></i>
         </a>
     </li>
     <li>
-        <a href="#">
+        <a href="${URL_CONTACT}">
             <div class="nav__link-left">
                 <i class="bi bi-chat-left-quote"></i>
                 <span>Contact</span>
@@ -84,14 +90,16 @@ export const renderLinkHeder = () => {
     </li>
     <li>
         <a 
-            href="#"
+            href="${URL_FORMS}"
+            class="${URL_FORMS === pathname ? 'active' : ''}"
         >
-            Blog
+        Forms
         </a>
     </li>
     <li>
         <a 
-            href="#"
+            href="${URL_CONTACT}"
+            class="${URL_CONTACT === pathname ? 'active' : ''}"
         >
             Contact
         </a>
@@ -151,7 +159,7 @@ export const renderIcons = () => {
     />
 </div>
 <div class="hd__auth-icon hd__cart">
-    <span>12</span>
+    <span>0</span>
     <img src="${baseURL}/bootstrap/bootstrapIcons/bag.svg" alt="" />
 </div>
     

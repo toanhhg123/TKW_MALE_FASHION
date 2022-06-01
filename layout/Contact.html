@@ -4,614 +4,346 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
         <link rel="stylesheet" href="../bootstrap/css/bootstrap-icon.css" />
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/contact.css" />
 
         <title>Contact</title>
-        <style>
-            .cssui-usercard {
-                box-sizing: border-box;
-                display: flex;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-                    0 1px 5px 0 rgba(0, 0, 0, 0.12),
-                    0 3px 1px -2px rgba(0, 0, 0, 0.2);
-                flex-direction: column;
-                background-color: #fff;
-                margin: 2rem auto 1rem;
-                position: relative;
-                z-index: 5;
-            }
-
-            @media screen and (min-width: 641px) {
-                .cssui-usercard {
-                    width: 38rem;
-                }
-            }
-
-            @media screen and (max-width: 640px) {
-                .cssui-usercard {
-                    width: 90%;
-                }
-            }
-
-            .cssui-usercard__body {
-                padding-bottom: 2rem;
-                flex-grow: 2;
-                color: #000;
-            }
-
-            .cssui-usercard__header {
-                padding: 3rem 5% 2rem;
-                display: flex;
-                align-items: center;
-                background-image: linear-gradient(to bottom, #3f51b5, #041886);
-                color: #fff;
-            }
-
-            .cssui-usercard__avatar {
-                border-radius: 50%;
-                border: 4px solid #fff;
-                box-sizing: border-box;
-                margin-right: 4%;
-                width: 10rem;
-                height: 10rem;
-                object-fit: cover;
-            }
-
-            .cssui-usercard__name {
-                font-size: 3.5rem;
-                font-weight: 300;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-
-            .cssui-usercard__name-label {
-                font-weight: 700;
-            }
-
-            .cssui-usercard__post {
-                display: block;
-            }
-
-            .cssui-usercard__title {
-                padding: 0 5% 1.5rem;
-                margin-top: 0;
-                margin-bottom: 3rem;
-                font-size: 2.4rem;
-                font-weight: 300;
-                color: #fff;
-                background-color: #041886;
-            }
-
-            .cssui-stats {
-                box-sizing: border-box;
-                font-size: 1.4rem;
-            }
-
-            .cssui-stats__name,
-            .cssui-stats__value {
-                display: block;
-                word-break: break-all;
-            }
-
-            .cssui-stats__value {
-                text-decoration: none;
-                color: inherit;
-                margin-top: 0.2em;
-            }
-
-            .cssui-usercard__stats {
-                padding-right: 4%;
-                padding-left: 4%;
-                text-align: center;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                align-items: flex-start;
-            }
-
-            .cssui-usercard__stats-item {
-                width: 48%;
-                margin-top: 3rem;
-            }
-
-            .cssui-usercard__stats-item:first-child,
-            .cssui-usercard__stats-item:nth-child(2) {
-                margin-top: 0;
-            }
-
-            .cssui-usercard__stats-info {
-                margin-top: 0.7rem;
-            }
-
-            .cssui-usercard__stats-name {
-                font-weight: 700;
-                font-size: 1.6rem;
-            }
-
-            .cssui-usercard__footer {
-                padding: 1.5rem 4%;
-                text-align: center;
-                background-color: #3f51b5;
-                color: #fff;
-            }
-
-            .cssui-icon {
-                width: 2em;
-                height: 2em;
-                display: inline-block;
-                background-repeat: no-repeat;
-                background-position: 50% 50%;
-                background-size: contain;
-            }
-
-            .cssui-social {
-                display: inline-block;
-                vertical-align: middle;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .cssui-social__name {
-                position: absolute;
-                left: -9999px;
-            }
-
-            .cssui-usercard__social {
-                margin-right: 1.6rem;
-                font-size: 0.8rem;
-            }
-
-            .cssui-usercard__social:last-child {
-                margin-right: 0;
-            }
-
-            .cssui-slider {
-                position: relative;
-                overflow: hidden;
-                box-sizing: border-box;
-                height: 32rem;
-            }
-
-            .cssui-slider__slides {
-                height: 100%;
-                transform: translate3d(0, 0, 0);
-                transition: transform 0.4s;
-            }
-
-            .cssui-slider__slide {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 0;
-            }
-
-            .cssui-slider__slide:nth-of-type(1) {
-                left: 0;
-            }
-
-            .cssui-slider__slide:nth-of-type(2) {
-                left: 100%;
-            }
-
-            .cssui-slider__slide:nth-of-type(3) {
-                left: 200%;
-            }
-
-            .cssui-slider__control {
-                width: 1.2rem;
-                height: 1.2rem;
-                display: block;
-                border-radius: 50%;
-                cursor: pointer;
-                text-indent: -9999px;
-                position: absolute;
-                z-index: 3;
-            }
-
-            .cssui-usercard__switch {
-                position: absolute;
-                top: 0;
-                left: -9999px;
-            }
-
-            .cssui-slider__switch:nth-of-type(1):checked
-                ~ .cssui-slider__slides {
-                transform: translate3d(0%, 0, 0);
-            }
-
-            .cssui-slider__switch:nth-of-type(2):checked
-                ~ .cssui-slider__slides {
-                transform: translate3d(-100%, 0, 0);
-            }
-
-            .cssui-slider__switch:nth-of-type(3):checked
-                ~ .cssui-slider__slides {
-                transform: translate3d(-200%, 0, 0);
-            }
-
-            .cssui-usercard__switch:checked + .cssui-slider__control:before {
-                transform: scale(0.7) translateZ(0);
-            }
-
-            .cssui-usercard__control {
-                border: 3px solid #3f51b5;
-                overflow: hidden;
-                position: absolute;
-                margin-left: -0.75rem;
-                bottom: 1rem;
-                z-index: 2;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transform: translateZ(0);
-            }
-
-            .cssui-usercard__control:before {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                transform: scale(0) translateZ(0);
-                background-color: #3f51b5;
-                transition: transform 0.2s ease-out;
-            }
-
-            .cssui-usercard__control:nth-of-type(1) {
-                left: 40%;
-            }
-
-            .cssui-usercard__control:nth-of-type(2) {
-                left: 50%;
-            }
-
-            .cssui-usercard__control:nth-of-type(3) {
-                left: 60%;
-            }
-
-            /*
-* demo styles
-*/
-
-            @media screen and (min-width: 981px) {
-                html {
-                    font-size: 62.5%;
-                }
-            }
-
-            @media screen and (min-width: 641px) and (max-width: 980px) {
-                html {
-                    font-size: 9px;
-                }
-            }
-
-            @media screen and (max-width: 640px) {
-                html {
-                    font-size: 8px;
-                }
-            }
-
-            body {
-                font-family: 'Roboto', 'Arial', sans-serif;
-                font-size: 1.6rem;
-                color: #fff;
-                margin: 0;
-                min-height: 100vh;
-                overflow-x: hidden;
-                background-image: linear-gradient(
-                    29deg,
-                    #512da8 50%,
-                    #673ab7 50%
-                );
-            }
-
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
-
-            .footer {
-                text-align: center;
-                padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
-                position: relative;
-                z-index: 5;
-            }
-
-            @media screen and (max-width: 640px) {
-                .footer {
-                    font-size: 1.4rem;
-                }
-            }
-
-            .footer__container {
-                display: flex;
-                justify-content: center;
-            }
-
-            .melnik909 {
-                margin-left: 2rem;
-            }
-        </style>
     </head>
     <body>
-        <article class="cssui-usercard">
-            <div class="cssui-usercard__body">
-                <header class="cssui-usercard__header">
-                    <img
-                        src="../images/avt_1.jpg"
-                        class="cssui-usercard__avatar"
-                        alt="Avatar"
-                    />
-                    <div class="cssui-usercard__header-info">
-                        <h3 class="cssui-usercard__name">
-                            Stas
-                            <span class="cssui-usercard__name-label"
-                                >Melnikov</span
-                            >
-                        </h3>
-                        <span class="cssui-usercard__post">UI Developer</span>
+        <div class="show__loader">
+            <div class="lds-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <header>
+            <div class="hd__modal">
+                <div class="nav__mb">
+                    <div class="nav__mb__log">
+                        <img src="../images/male_mashion.png" alt="" />
                     </div>
-                </header>
-                <div class="cssui-usercard__content">
-                    <div class="cssui-slider">
-                        <!-- the control elements of slider -->
+                    <ul>
+                        <li>
+                            <a href="">
+                                <div class="nav__link-left">
+                                    <i class="bi bi-house"></i>
+                                    <span>Home</span>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="nav__link-left">
+                                    <i class="bi bi-shop"></i>
+                                    <span>Shop</span>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="nav__link-left">
+                                    <i class="bi bi-newspaper"></i>
+                                    <span>Blog</span>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="nav__link-left">
+                                    <i class="bi bi-chat-left-quote"></i>
+                                    <span>Contact</span>
+                                </div>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hd__container container">
+                <div class="hd__menu__icon">
+                    <i class="bi bi-list"></i>
+                </div>
 
-                        <input
-                            id="slide1"
-                            type="radio"
-                            class="cssui-slider__switch cssui-usercard__switch"
-                            name="slider-controls"
-                            checked
-                            autofocus
+                <div class="hd__logo">
+                    <img src="../images/male_mashion.png" alt="" />
+                </div>
+                <div class="hd__nav">
+                    <ul>
+                        <li><a class="active" href="">Home</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="hd__auth">
+                    <div class="hd__auth-icon">
+                        <img
+                            src="../bootstrap/bootstrapIcons/search.svg"
+                            alt=""
                         />
-                        <label
-                            for="slide1"
-                            class="cssui-slider__control cssui-usercard__control"
-                        ></label>
-                        <input
-                            id="slide2"
-                            type="radio"
-                            class="cssui-slider__switch cssui-usercard__switch"
-                            name="slider-controls"
+                    </div>
+                    <div class="hd__auth-icon">
+                        <img
+                            src="../bootstrap/bootstrapIcons/heart.svg"
+                            alt=""
                         />
-                        <label
-                            for="slide2"
-                            class="cssui-slider__control cssui-usercard__control"
-                        ></label>
-                        <input
-                            id="slide3"
-                            type="radio"
-                            class="cssui-slider__switch cssui-usercard__switch"
-                            name="slider-controls"
-                        />
-                        <label
-                            for="slide3"
-                            class="cssui-slider__control cssui-usercard__control"
-                        ></label>
+                    </div>
+                    <div class="hd__auth-icon hd__cart">
+                        <span>12</span>
+                        <img src="../bootstrap/bootstrapIcons/bag.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </header>
 
-                        <div class="cssui-slider__slides">
-                            <!-- first slide -->
-
-                            <div class="cssui-slider__slide">
-                                <h4 class="cssui-usercard__title">About me</h4>
-                                <div class="cssui-usercard__stats">
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <div class="card">
+                            <div class="ds-top"></div>
+                            <div class="avatar-holder">
+                                <img
+                                    src="../images/avt_3.jpg"
+                                    alt="Le Huu Toan"
+                                />
+                            </div>
+                            <div class="name">
+                                <a href="#" target="_blank">Lê Hữu Toàn</a>
+                                <h6 title="Followers">
+                                    <i class="fas fa-users"></i>
+                                    <span class="followers">3.012</span>
+                                </h6>
+                            </div>
+                            <div class="button">
+                                <a href="#" class="btn" onmousedown="follow();"
+                                    >Follow <i class="fas fa-user-plus"></i
+                                ></a>
+                            </div>
+                            <div class="ds-info">
+                                <div class="ds pens">
+                                    <h6
+                                        title="Number of pens created by the user"
                                     >
-                                        <i class="bi bi-translate"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >Language</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >English</span
-                                            >
-                                        </div>
+                                        Pens <i class="fas fa-edit"></i>
+                                    </h6>
+                                    <p>40%</p>
+                                </div>
+                                <div class="ds projects">
+                                    <h6
+                                        title="Number of projects created by the user"
+                                    >
+                                        Projects
+                                        <i class="fas fa-project-diagram"></i>
+                                    </h6>
+                                    <p>06</p>
+                                </div>
+                                <div class="ds posts">
+                                    <h6 title="Number of posts">
+                                        Posts <i class="fas fa-comments"></i>
+                                    </h6>
+                                    <p>06</p>
+                                </div>
+                            </div>
+                            <div class="ds-skill">
+                                <h6>
+                                    Skill
+                                    <i
+                                        class="fa fa-code"
+                                        aria-hidden="true"
+                                    ></i>
+                                </h6>
+                                <div class="skill html">
+                                    <h6><i class="fab fa-html5"></i> HTML5</h6>
+                                    <div class="bar bar-html">
+                                        <p>40%</p>
                                     </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i class="cssui-icon icon-location"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >Hometown</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >London</span
-                                            >
-                                        </div>
+                                </div>
+                                <div class="skill css">
+                                    <h6>
+                                        <i class="fab fa-css3-alt"></i> CSS3
+                                    </h6>
+                                    <div class="bar bar-css">
+                                        <p>40%</p>
                                     </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i class="cssui-icon icon-calendar"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >Date of birth</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >03 December 1990</span
-                                            >
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i
-                                            class="cssui-icon icon-man-woman"
-                                        ></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >Relationship</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >Married</span
-                                            >
-                                        </div>
+                                </div>
+                                <div class="skill javascript">
+                                    <h6>
+                                        <i class="fab fa-js"></i> JavaScript
+                                    </h6>
+                                    <div class="bar bar-js">
+                                        <p>90%</p>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- second slide -->
-
-                            <div class="cssui-slider__slide">
-                                <h4 class="cssui-usercard__title">My Skills</h4>
-                                <div class="cssui-usercard__stats">
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card">
+                            <div class="ds-top"></div>
+                            <div class="avatar-holder">
+                                <img src="../images/avt_1.jpg" alt="GD" />
+                            </div>
+                            <div class="name">
+                                <a href="" target="_blank">Võ Gia Đạt</a>
+                                <h6 title="Followers">
+                                    <i class="fas fa-users"></i>
+                                    <span class="followers">2.012</span>
+                                </h6>
+                            </div>
+                            <div class="button">
+                                <a href="#" class="btn" onmousedown="follow();"
+                                    >Follow <i class="fas fa-user-plus"></i
+                                ></a>
+                            </div>
+                            <div class="ds-info">
+                                <div class="ds pens">
+                                    <h6
+                                        title="Number of pens created by the user"
                                     >
-                                        <i class="cssui-icon icon-html"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >HTML</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >85%</span
-                                            >
-                                        </div>
+                                        Pens <i class="fas fa-edit"></i>
+                                    </h6>
+                                    <p>30%</p>
+                                </div>
+                                <div class="ds projects">
+                                    <h6
+                                        title="Number of projects created by the user"
+                                    >
+                                        Projects
+                                        <i class="fas fa-project-diagram"></i>
+                                    </h6>
+                                    <p>04</p>
+                                </div>
+                                <div class="ds posts">
+                                    <h6 title="Number of posts">
+                                        Posts <i class="fas fa-comments"></i>
+                                    </h6>
+                                    <p>04</p>
+                                </div>
+                            </div>
+                            <div class="ds-skill">
+                                <h6>
+                                    Skill
+                                    <i
+                                        class="fa fa-code"
+                                        aria-hidden="true"
+                                    ></i>
+                                </h6>
+                                <div class="skill html">
+                                    <h6><i class="fab fa-html5"></i> HTML5</h6>
+                                    <div class="bar bar-html">
+                                        <p>20%</p>
                                     </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i class="cssui-icon icon-vue"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >VUE</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >90%</span
-                                            >
-                                        </div>
+                                </div>
+                                <div class="skill css">
+                                    <h6>
+                                        <i class="fab fa-css3-alt"></i> CSS3
+                                    </h6>
+                                    <div class="bar bar-css">
+                                        <p>40%</p>
                                     </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i class="cssui-icon icon-angular"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >AngularJS</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >70%</span
-                                            >
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i class="cssui-icon icon-js"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >NodeJS</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >82%</span
-                                            >
-                                        </div>
+                                </div>
+                                <div class="skill javascript">
+                                    <h6>
+                                        <i class="fab fa-js"></i> JavaScript
+                                    </h6>
+                                    <div class="bar bar-js">
+                                        <p>05%</p>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <!-- third slide -->
-
-                            <div class="cssui-slider__slide">
-                                <h4 class="cssui-usercard__title">
-                                    My Contacts
-                                </h4>
-                                <div class="cssui-usercard__stats">
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
+                    <div class="col-12 col-lg-4">
+                        <div class="card">
+                            <div class="ds-top"></div>
+                            <div class="avatar-holder">
+                                <img src="../images/avt_2.jpg" alt="GD" />
+                            </div>
+                            <div class="name">
+                                <a href="" target="_blank">Nguyễn Bảo Sanh</a>
+                                <h6 title="Followers">
+                                    <i class="fas fa-users"></i>
+                                    <span class="followers">1.008</span>
+                                </h6>
+                            </div>
+                            <div class="button">
+                                <a href="#" class="btn" onmousedown="follow();"
+                                    >Follow <i class="fas fa-user-plus"></i
+                                ></a>
+                            </div>
+                            <div class="ds-info">
+                                <div class="ds pens">
+                                    <h6
+                                        title="Number of pens created by the user"
                                     >
-                                        <i class="cssui-icon icon-email"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >E-mail</span
-                                            >
-                                            <a
-                                                href="#0"
-                                                class="cssui-stats__value"
-                                                >text@gmail.com</a
-                                            >
-                                        </div>
+                                        Pens <i class="fas fa-edit"></i>
+                                    </h6>
+                                    <p>30%</p>
+                                </div>
+                                <div class="ds projects">
+                                    <h6
+                                        title="Number of projects created by the user"
+                                    >
+                                        Projects
+                                        <i class="fas fa-project-diagram"></i>
+                                    </h6>
+                                    <p>04</p>
+                                </div>
+                                <div class="ds posts">
+                                    <h6 title="Number of posts">
+                                        Posts <i class="fas fa-comments"></i>
+                                    </h6>
+                                    <p>04</p>
+                                </div>
+                            </div>
+                            <div class="ds-skill">
+                                <h6>
+                                    Skill
+                                    <i
+                                        class="fa fa-code"
+                                        aria-hidden="true"
+                                    ></i>
+                                </h6>
+                                <div class="skill html">
+                                    <h6><i class="fab fa-html5"></i> HTML5</h6>
+                                    <div class="bar bar-html">
+                                        <p>40%</p>
                                     </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i class="cssui-icon icon-phone"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >Phone</span
-                                            >
-                                            <a
-                                                href="tel:79000000000"
-                                                class="cssui-stats__value"
-                                                >7-900-000-00-00</a
-                                            >
-                                        </div>
+                                </div>
+                                <div class="skill css">
+                                    <h6>
+                                        <i class="fab fa-css3-alt"></i> CSS3
+                                    </h6>
+                                    <div class="bar bar-css">
+                                        <p>20%</p>
                                     </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i class="cssui-icon icon-whatsapp"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >WhatsApp</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >+7 000 000-00-00</span
-                                            >
-                                        </div>
-                                    </div>
-                                    <div
-                                        class="cssui-stats cssui-usercard__stats-item"
-                                    >
-                                        <i class="cssui-icon icon-skype"></i>
-                                        <div
-                                            class="cssui-stats__info cssui-usercard__stats-info"
-                                        >
-                                            <span
-                                                class="cssui-stats__name cssui-usercard__stats-name"
-                                                >Skype</span
-                                            >
-                                            <span class="cssui-stats__value"
-                                                >username</span
-                                            >
-                                        </div>
+                                </div>
+                                <div class="skill javascript">
+                                    <h6>
+                                        <i class="fab fa-js"></i> JavaScript
+                                    </h6>
+                                    <div class="bar bar-js">
+                                        <p>05%</p>
                                     </div>
                                 </div>
                             </div>
@@ -619,20 +351,9 @@
                     </div>
                 </div>
             </div>
-            <footer class="cssui-usercard__footer">
-                <a href="#0" class="cssui-social cssui-usercard__social">
-                    <i class="cssui-icon icon-twitter"></i>
-                    <span class="cssui-social__name">twitter</span>
-                </a>
-                <a href="#0" class="cssui-social cssui-usercard__social">
-                    <i class="cssui-icon icon-linkedin"></i>
-                    <span class="cssui-social__name">linkedin</span>
-                </a>
-                <a href="#0" class="cssui-social cssui-usercard__social">
-                    <i class="cssui-icon icon-codepen"></i>
-                    <span class="cssui-social__name">codepen</span>
-                </a>
-            </footer>
-        </article>
+        </main>
+        <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <script src="../js/index.js" type="module"></script>
     </body>
 </html>

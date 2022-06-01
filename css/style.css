@@ -210,7 +210,11 @@ header .hd__search__show .hd__prs__search .hd__pr-item {
   padding: 0.5rem 0;
   gap: 10px;
   padding: 0.5rem;
+  cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .hd__search__show .hd__prs__search .hd__pr-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 header .hd__search__show .hd__prs__search .hd__pr-item .hd__pr-img {
   width: 50px;

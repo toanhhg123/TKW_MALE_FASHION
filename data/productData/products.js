@@ -60,21 +60,6 @@ export const products = [
     },
 
     {
-        id: 'T24',
-        name: 'ÁO THUN BA LỖ TRƠN',
-        sale: 392,
-        price: 490,
-        decs: `Áo thun ba lỗ trơn, dáng suông basic, cổ tròn. Độ dài vừa phải. Chất thun.
-
-        Áo thun ba lỗ trơn cổ tròn phù hợp cho những buổi đi chơi dã ngoại hoặc chơi thể thao. Chất thun thoáng mát thấm mồ hôi, dễ dàng vận động thoải mái. Sự lựa chọn thích hợp cho những người yêu thể thao.
-        
-        Màu sắc: Đen`,
-        img: 'prs_24.png',
-        imgs: ['prs_24_1.png', 'prs_24_2.png', 'prs_24_3.png', 'prs_24_4.png'],
-        rate: 5,
-    },
-
-    {
         id: 'T25',
         name: 'ÁO THUN SYMPHONY',
         sale: 520,
