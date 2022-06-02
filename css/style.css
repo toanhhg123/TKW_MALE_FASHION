@@ -895,6 +895,173 @@ footer .ft__box > form input {
   background-color: #272727;
   color: #fff;
 }
+.proItem .proItem__if .prI__desc {
+  margin-top: 3rem;
+}
+.proItem .proItem__if .prI__desc .prI__desc-head ul {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.proItem .proItem__if .prI__desc .prI__desc-head ul li {
+  padding: 2rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #777;
+  cursor: pointer;
+}
+.proItem .proItem__if .prI__desc .prI__desc-head ul li.active {
+  border-bottom: 1px solid #000;
+}
+.proItem .proItem__if .prI__desc .prI__desc-r {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.proItem .proItem__if .prI__desc .prI__desc-r .prI__desv-ct {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+.proItem .proItem__if .prI__desc .prI__desc-r .prI__desv-ct h5 span {
+  font-weight: 600;
+}
+.proItem .proItem__if .prI__desc .prI__desc-r .prI__desv-ct h4 {
+  display: flex;
+  gap: 2rem;
+}
+.proItem .proItem__if .prI__desc .prI__desc-r .prI__desv-ct h4 span {
+  font-weight: 600;
+}
+.proItem .proItem__if .prI__desc .prI__desc-f {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  position: relative;
+}
+.proItem .proItem__if .prI__desc .prI__desc-f::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  left: 0;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.proItem .proItem__if .prI__desc .prI__desc-f .prI__desc-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  cursor: pointer;
+}
+.proItem .prI__client {
+  margin-top: 4rem;
+}
+.proItem .prI__client > h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #272727;
+  margin-bottom: 3rem;
+}
+.proItem .prI__client .prI__rate {
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  width: 300px;
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.proItem .prI__client .prI__rate .prI__num {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.proItem .prI__client .prI__rate .prI__num > h4 {
+  font-size: 4rem;
+  color: #eeb256;
+  font-weight: 700;
+}
+.proItem .prI__client .prI__rate .prI__num .prI__num-r {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  color: #888;
+}
+.proItem .prI__client .prI__rate .prI__num .prI__num-r i {
+  color: #eeb256;
+}
+.proItem .prI__client .prI__rate .prI__rate-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.proItem .prI__client .prI__rate .prI__rate-row-rts {
+  gap: 2px;
+}
+.proItem .prI__client .prI__rate .prI__rate-row .prI__rate-line {
+  height: 6px;
+  border-radius: 5px;
+  flex-grow: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.proItem .prI__client .prI__rate .prI__rate-row p {
+  color: #888;
+}
+.proItem .prI__client-r {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+.proItem .prI__client-r > p {
+  color: #777;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.8rem;
+}
+.proItem .prI__client-r button {
+  width: 100%;
+  padding: 0.6rem 0rem;
+  background-color: #000000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border-radius: 20px 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #000;
+  transition: all 0.3s ease-in-out;
+}
+.proItem .prI__client-r button:hover {
+  background-color: #fff;
+  color: #000;
+}
 
 .prI__qty__input {
   width: max-content;

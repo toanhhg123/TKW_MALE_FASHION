@@ -39,7 +39,6 @@ export const renderProductItem = () => {
 
     carouselInner.innerHTML = carouselItems;
     document.querySelector('.proItem__smaiImgs').innerHTML = smailButton;
-    console.log(rate);
     document.querySelector('.prI__rt').innerHTML = renderStart(rate || 0, true);
     document.querySelector('.prI__id span').textContent = `SKU: ${id}`;
     document.querySelector('.proItem__if h2').textContent = name;
@@ -110,4 +109,55 @@ export const orderProduct = () => {
 export const saveProductToSession = (id) => {
     const product = products.find((pro) => pro.id === id);
     sessionStorage.setItem('productItem', JSON.stringify(product));
+};
+
+export const noneDesc = (element) => {
+    const childrents = [...element.children];
+    childrents.forEach((e, i) => i !== 0 && e.classList.add('d-none'));
+};
+
+export const hideDesc = (element) => {
+    const childrents = [...element.children];
+    childrents.forEach((e, i) => i !== 0 && e.classList.remove('d-none'));
+};
+
+export const handleProductDesc = () => {
+    const iconsDown = document.querySelectorAll('.pri-down-icon');
+    const iconsUp = document.querySelectorAll('.pri-up-icon');
+
+    iconsDown.forEach((icon) => {
+        icon.onclick = () => {
+            icon.parentNode.querySelector('.pri-up-icon').style.display =
+                'flex';
+            icon.style.display = 'none';
+            const content =
+                icon.parentNode.parentNode.querySelector('.prI__desv-ct');
+            hideDesc(content);
+        };
+    });
+    iconsUp.forEach((icon) => {
+        icon.onclick = () => {
+            icon.parentNode.querySelector('.pri-down-icon').style.display =
+                'flex';
+            icon.style.display = 'none';
+            const content =
+                icon.parentNode.parentNode.querySelector('.prI__desv-ct');
+            noneDesc(content);
+        };
+    });
+};
+
+export const handleDescHead = () => {
+    const navs = document.querySelectorAll('.prI__desc-head ul li');
+    const contents = document.querySelectorAll('.prI__desc-r');
+    navs.forEach((nav) => {
+        nav.onclick = () => {
+            navs.forEach((n) => n.classList.remove('active'));
+            const className = nav.className;
+            nav.classList.add('active');
+            contents.forEach((c) => (c.style.display = 'none'));
+            [...contents].find((c) => c.id === className).style.display =
+                'flex';
+        };
+    });
 };
