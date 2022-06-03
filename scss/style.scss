@@ -770,6 +770,19 @@ footer {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 1rem;
+                    margin-bottom: 1rem;
+
+                    & .sb__shop-input__range {
+                        width: 100%;
+                        & > input {
+                            width: 100%;
+                        }
+
+                        &-value {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
 
                     & span {
                         width: max-content;
@@ -782,6 +795,12 @@ footer {
                         &:hover {
                             border-color: #000;
                         }
+                    }
+
+                    & .color {
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
                     }
                 }
             }

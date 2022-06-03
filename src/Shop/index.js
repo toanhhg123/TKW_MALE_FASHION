@@ -4,6 +4,7 @@ import { URL_PRODUCT_ITEM } from '../../URL/Routes.js';
 import { renderProduct } from '../products/handleProductHome.js';
 const iconPluss = document.querySelectorAll('.plus-icon');
 const iconDashs = document.querySelectorAll('.dash-icon');
+const inputRange = document.querySelector('.sb__shop-input__range input');
 
 renderProduct(products, baseURL + URL_PRODUCT_ITEM);
 
@@ -31,4 +32,10 @@ iconDashs.forEach((icon, index) => {
             iconPluss[index].style.display = 'block';
         }
     });
+});
+
+inputRange.addEventListener('input', (e) => {
+    document.querySelector(
+        '.input__range-value.max'
+    ).textContent = `$${e.target.value}`;
 });

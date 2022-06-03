@@ -1,5 +1,5 @@
 import { baseURL } from '../../URL/config.js';
-import { URL_CART } from '../../URL/Routes.js';
+import { URL_CART, URL_CONTACT } from '../../URL/Routes.js';
 import { products } from '../../data/productData/products.js';
 export const renderStart = (num, cmt = false) => {
     let stars = ``;
@@ -9,6 +9,7 @@ export const renderStart = (num, cmt = false) => {
 };
 export const renderProductItem = () => {
     const productItem = JSON.parse(sessionStorage.getItem('productItem'));
+    if (!productItem) return (document.location.href = URL_CONTACT);
     const { id, name, imgs, sale, rate } = productItem;
     const carouselInner = document.querySelector('.carousel-inner');
 

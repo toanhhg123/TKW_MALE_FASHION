@@ -691,6 +691,17 @@ footer .ft__box > form input {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+.shop .sb__shop-body .sb__shop-op .sb__shop-choices .sb__shop-choices-btngr .sb__shop-input__range {
+  width: 100%;
+}
+.shop .sb__shop-body .sb__shop-op .sb__shop-choices .sb__shop-choices-btngr .sb__shop-input__range > input {
+  width: 100%;
+}
+.shop .sb__shop-body .sb__shop-op .sb__shop-choices .sb__shop-choices-btngr .sb__shop-input__range-value {
+  display: flex;
+  justify-content: space-between;
 }
 .shop .sb__shop-body .sb__shop-op .sb__shop-choices .sb__shop-choices-btngr span {
   width: max-content;
@@ -703,6 +714,11 @@ footer .ft__box > form input {
 }
 .shop .sb__shop-body .sb__shop-op .sb__shop-choices .sb__shop-choices-btngr span:hover {
   border-color: #000;
+}
+.shop .sb__shop-body .sb__shop-op .sb__shop-choices .sb__shop-choices-btngr .color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 .shop .sb__shop-buttions {
   display: flex;
