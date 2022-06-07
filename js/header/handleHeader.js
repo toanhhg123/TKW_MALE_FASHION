@@ -26,6 +26,14 @@ export const ShowSearchHeader = () => {
     return headerSearch;
 };
 
+export const renderLogoLink = () => {
+    document.querySelector('.hd__logo').innerHTML = `
+    <a href="${URL_HOME}">
+    <img src="${baseURL}/images/male_mashion.png" alt="" />
+</a>
+    `;
+};
+
 export const renderLinkHeder = () => {
     const hdNav = document.querySelector('.hd__nav ul');
     const hdMb = document.querySelector('.nav__mb ul');

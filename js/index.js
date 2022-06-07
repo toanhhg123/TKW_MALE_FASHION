@@ -7,9 +7,11 @@ import {
     renderHeaderSearch,
     renderIcons,
     SearchProduct,
+    renderLogoLink,
 } from './header/handleHeader.js';
 
 window.onload = (e) => {
+    renderLogoLink();
     renderLinkHeder();
     renderIcons();
     handShowNavMobile();
